@@ -1,11 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <!-- Metaetiquetas SEO y Metadatos avanzados -->
+    <meta name="description" content="Club de video especializado en películas, series y recomendaciones de cine.">
+    <meta name="keywords" content="peliculas, videos, cine, series, estrenos">
+    <meta name="author" content="Tu Nombre o Empresa">
+    <meta name="robots" content="index, follow">
+
+    <!-- Metaetiquetas Open Graph (Redes Sociales / Facebook / WhatsApp) -->
+    <meta property="og:title" content="Club de Video - Las mejores películas">
+    <meta property="og:description" content="Descubre el catálogo exclusivo de películas y deja tus comentarios.">
+    <meta property="og:image" content="https://mipagina.com/imagen-og.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Metaetiquetas de Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Club de Video">
+    <meta name="twitter:description" content="Tu club de cine favorito en la web.">
+
+    <title>Club de Videos - Catálogo Oficial</title>
 </head>
 <body>
-    
+    <header>
+        <div class="LOGO">
+            <h1>Club de videos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#peliculas">Peliculas</a></li>
+                <li><a href="#actores">Actores</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenidos a Club de Videos</h2>
+            <p>Aquí encontrarás las mejores películas y estrenos del año.</p>
+            <button>Ver películas</button>
+        </section>
+
+        <section id="peliculas">
+            <h2>Películas destacadas</h2>
+            
+            <article itemscope itemtype="https://schema.org/Movie">
+                <img src="imagenPrueba.jfif" alt="Película Tarzán" itemprop="image">
+                <h3 itemprop="name">Tarzán</h3>
+                <p itemprop="description">La apasionante historia de Tarzán en la selva.</p>
+                <span itemprop="director">Director: José Pérez</span>
+                <span itemprop="datePublished">Año: 2026</span>
+            </article>
+
+            <article itemscope itemtype="https://schema.org/Movie">
+                <img src="imagenPrueba2.jfif" alt="Película Aventura Espacial" itemprop="image">
+                <h3 itemprop="name">Galaxia Oculta</h3>
+                <p itemprop="description">Un viaje épico más allá de las estrellas.</p>
+                <span itemprop="director">Director: María Gómez</span>
+                <span itemprop="datePublished">Año: 2025</span>
+            </article>
+
+            <article itemscope itemtype="https://schema.org/Movie">
+                <img src="imagenPrueba3.jfif" alt="Película de Misterio" itemprop="image">
+                <h3 itemprop="name">El Secreto del Valle</h3>
+                <p itemprop="description">Un thriller lleno de misterio y giros inesperados.</p>
+                <span itemprop="director">Director: Carlos Ruiz</span>
+                <span itemprop="datePublished">Año: 2024</span>
+            </article>
+        </section>
+
+        <section id="testimonio">
+            <h2>Testimonios</h2>
+            <blockquote>
+                "Esta sección tiene las mejores películas del momento."
+                <cite>Ana Valle</cite>
+            </blockquote>
+            <blockquote>
+                "Excelente calidad de resolución y catálogo muy variado."
+                <cite>Carlos Contreras</cite>
+            </blockquote>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto y Reservas</h2>
+            <form action="#" method="POST">
+                
+                <!-- Input de texto clásico -->
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3">
+                </div>
+
+                <!-- Input de tipo email -->
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Nuevo: Input de tipo fecha (date) -->
+                <div>
+                    <label for="fecha">Fecha preferida para función:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <!-- Nuevo: Menú desplegable (select) -->
+                <div>
+                    <label for="genero">Género favorito:</label>
+                    <select id="genero" name="genero">
+                        <option value="accion">Acción</option>
+                        <option value="animacion">Animación</option>
+                        <option value="terror">Terror</option>
+                        <option value="drama">Drama</option>
+                    </select>
+                </div>
+
+                <!-- Nuevo: Input de tipo rango (range) para calificación -->
+                <div>
+                    <label for="calificacion">Califica nuestra web (1 al 10):</label>
+                    <input type="range" id="calificacion" name="calificacion" min="1" max="10" value="8">
+                </div>
+
+                <!-- Nuevo: Casilla de verificación (checkbox) -->
+                <div>
+                    <input type="checkbox" id="suscribirse" name="suscribirse" checked>
+                    <label for="suscribirse">Deseo recibir el boletín de novedades por correo</label>
+                </div>
+
+                <!-- Textarea con corrección de atributos -->
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" required minlength="15"></textarea>
+                </div>
+
+                <!-- Botón de envío -->
+                <div>
+                    <input type="submit" value="Enviar Mensaje">
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
