@@ -1,0 +1,72 @@
+/* ===== SECCIÓN HERO ===== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--color-fondo-oscuro);
+  }
+  
+  .hero p {
+    margin: 20px 0;
+  }
+  
+  .hero button {
+    padding: 10px 20px;
+    border: 1px solid var(--color-negro);
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    margin: 10px 0;
+  }
+  
+  .hero button:hover {
+    background-color: transparent;
+    color: var(--color-negro);
+  }
+  
+  /* ===== SECCIÓN BOLETÍN ===== */
+  .boletin {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: var(--color-blanco);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .boletin h2,
+  .boletin p {
+    color: var(--color-texto);
+    margin: 10px 0;
+  }
+  
+  .boletin label {
+    display: block;
+    text-align: left;
+    margin: 5px 0;
+  }
+  
+  .boletin input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid var(--color-negro);
+    border-radius: var(--border-radius);
+  }
+  
+  .boletin button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-negro);
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    margin: 10px 0;
+  }
+  
+  .boletin button[type="submit"]:hover {
+    background-color: transparent;
+    color: var(--color-negro);
+  }

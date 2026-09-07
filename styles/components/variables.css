@@ -1,0 +1,30 @@
+:root {
+    --color-fondo-claro: #f9f9f9;
+    --color-fondo-oscuro: #e6e6e6;
+    --color-texto: #333;
+    --color-blanco: #ffffff;
+    --color-negro: #000000;
+    --color-gris: gray;
+    --font-principal: Arial, sans-serif;
+    --max-width-contenedor: 1200px;
+    --padding-base: 20px;
+    --border-radius: 4px;
+  }
+  
+  /* ===== RESET ===== */
+  * {
+    font-family: var(--font-principal);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* ===== CONTENEDOR CENTRADO ===== */
+  .contenedor {
+    max-width: var(--max-width-contenedor);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  

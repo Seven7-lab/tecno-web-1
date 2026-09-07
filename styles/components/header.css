@@ -1,0 +1,38 @@
+ /* ===== HEADER ===== */
+ header {
+    padding: var(--padding-base);
+    background-color: var(--color-fondo-claro);
+  }
+  
+  header h1 {
+    font-size: 28px;
+  }
+  
+  header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: var(--color-negro);
+  }
+  
+  header nav button {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-negro);
+    border: 1px solid var(--color-negro);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  header nav button:last-of-type {
+    display: none;
+  }
+  
+  header nav button:hover {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+  }
