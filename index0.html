@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">´
+    <!--Se encarga de adaptar el contenido de la pagina web a telefonos y demas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club de Videos - Las mejores películas</title>
+    <meta name="description" 
+          content="Club de Videos: Disfruta de las mejores películas, series y documentales. ¡Suscríbete ahora!">
+    <!-- sire para definir palabras claves-->
+    <meta name="keywords"
+          content="películas, series, documentales, cine, entretenimiento, club de videos">
+    <meta name="author" content="Club de Videos">
+    <meta name="robots" content="index, follow">
+    <!--index: Le indica al buscador guardar y mostrar esta página en sus resultados de búsqueda
+    follow: Le indica seguir los enlaces que hay dentro de esta página para descubrir más contenido-->
+
+    <!-- OPEN GRAPH para controlar cómo se ve la página cuando se comparte un enlace en plataformas
+     el og indica q es parte del OPEN GRAPH-->
+    <meta property="og:title" content="Club de Videos">
+    <meta property="og:description" 
+          content="Disfruta de las mejores películas, series y documentales.">
+    <meta property="og:image" content="https://clubvideos.com/og-image.jpg">
+    <meta property="og:url" content="https://clubvideos.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Club de Videos">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" 
+          rel="stylesheet">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__logo">🎬 Club de Videos</h1>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <!-- TRUCO = para todas las fila si quieres lo msimo, apretar alt + un clink donde quieres y sin soltar el alt precionas otro clink donde quieres q se repita -->
+                <li><a class="header__link" href="#inicio">Inicio</a></li>
+                <li><a class="header__link" href="#peliculas">Películas</a></li>
+                <li><a class="header__link" href="#testimonios">Testimonios</a></li>
+                <li><a class="header__link" href="#contacto">Contacto</a></li>
+            </ul> 
+            <button class="header__toggle">Tema</button>
+        </nav>
+    </header>
+    <main>
+        <!-- hero la primera seccion q le muestra al usuario -->
+        <section id="inicio" class="hero"> 
+            <h2 class="hero__title">Bienvenido al Club de Videos</h2>
+            <p class="hero__subtitle">Descubre las mejores películas, series y documentales.</p>
+            <a class="hero__cta" href="#peliculas">Explorar Catálogo</a>
+        </section>
+        <section id="peliculas" class="peliculas">
+            <h2 class="peliculas__title">Películas Destacadas</h2>
+            <!--<div class="peliculas-grid"> -->          <!-- div es un contenedor -->
+            <div class="peliculas__grid">
+                <article class="card card--featured" itemscope itemtype="https://schema.org/Movie"> <!-- cuando tiene espacio significa q tiene dos clases -->
+                    <img itemprop="image" class="card__image" 
+                         src="assets/images/pelicula1.jpg" 
+                         alt="Cartel de la película El Padrino">
+                    <h3 class="card__title" itemprop="name">El Padrino</h3>
+                    <p class="card__director"><strong>Director:</strong> <span itemprop="director">Francis Ford Coppola</span></p>
+                    <p class="card__year"><strong>Año:</strong> <span itemprop="datePublished">1972</span></p>
+                    <p class="card__description" itemprop="description">La historia de la familia Corleone en Nueva York.</p>
+                    <p class="card__rating"><strong>Calificación:</strong> 
+                        <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                            <span itemprop="ratingValue">9.2</span>/10
+                        </span>
+                    </p> 
+                    <button class="card__button">Ver mas</button>
+                </article>
+                <article class="card card--featured" itemscope itemtype="https://schema.org/Movie">
+                    <img itemprop="image" c class="card__year"lass="card__image class="card__title""
+                         src="assets/images/pelicula2.jpg" 
+                         alt="Cartel
+                         <button class="card__button">Ver mas</button> de la película Titanic">
+                    <h3 class="card__title" itemprop="name">Titanic</h3>
+                    <p class="card__director"><strong>Director:</strong> <span itemprop="director">James Cameron</span></p>
+                    <p class="card__year"><strong>Año:</strong> <span itemprop="datePublished">1997</span></p>
+                    <p class="card__description" itemprop="description">Una historia de amor en el famoso barco.</p>
+                    <p class="card__rating"><strong>Calificación:</strong> 
+                        <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                            <span itemprop="ratingValue">8.9</span>/10
+                        </span>
+                    </p> 
+                    <button class="card__button">Ver mas</button> <!-- to do -->
+                </article>
+                <article class="card card--featured" itemscope itemtype="https://schema.org/Movie">
+                    <img itemprop="image" class="card__image class="card__title" "
+                         src="assets/imagenPrueba.jfif" 
+                         alt="Cartel de la película Inception">
+                    <h3 class="card__title" itemprop="name">Inception</h3>
+                    <p class="card__director"><strong>Director:</strong> <span itemprop="director">Christopher Nolan</span></p>
+                    <p class="card__year"><strong>Año:</strong> <span itemprop="datePublished">2010</span></p>
+                    <p class="card__description" itemprop="description">Un ladrón que roba secretos del subconsciente.</p>
+                    <p class="card__rating"><strong>Calificación:</strong> 
+                        <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                            <span itemprop="ratingValue">9.0</span>/10
+                        </span>
+                    </p> 
+                    <button class="card__button">Ver mas</button>
+                </article>
+            </div>
+        </section>
+        <section class="testimonials" id="testimonios">
+            <h2 class="testimonials__title">Testimonios</h2>
+            <blockquote class="testimonials__quote">
+                "El Club de Videos tiene la mejor colección de películas. ¡Recomendado!"
+            </blockquote> <!-- to do -->
+            <p>— <strong>Ana Gómez</strong>, usuaria satisfecha</p>
+             
+            <!--seccion de testimonios o citas-->
+            <blockquote class="testimonials__quote">
+                "Excelente servicio y variedad de contenido. Muy fácil de usar."
+            </blockquote>
+            <p>— <strong>Carlos López</strong>, usuario frecuente</p>
+        </section>
+        <section class="contact" id="contacto">
+            <h2 class="contact__title" >Contáctanos</h2>
+            <form class="¨contact__form" action="/api/contacto" method="POST">
+                <div class="contacts__field">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" 
+                           id="nombre" 
+                           name="nombre" 
+                           required 
+                           minlength="3" 
+                           maxlength="50" 
+                           placeholder="Ej: Juan Pérez">
+                </div>
+                <div class="contacts__field">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           required 
+                           placeholder="ejemplo@correo.com">
+                </div>
+                <div class="contacts__field">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" 
+                              name="mensaje" 
+                              required 
+                              minlength="10" 
+                              rows="5" 
+                              placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+                <button class="contacts__button"type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+    <section class="trailers" id="trailers">
+        <h2 class="trailers__title">Ver Trailer</h2>
+        <iframe class="trailers__iframe" width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/KGW_5fPY6As?si=II7alvJVHbqDwsUa" 
+                title="Trailer de película" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </section>
+    <footer class="footer">
+        <p class="footer__copy">&copy; 2026 Club de Videos - Todos los derechos reservados</p>
+        <!-- Enlaces a redes sociales (se estilarán en la Semana 3) -->
+        <div class="social-links">
+            <a class="social-link__iteam" href="#">Facebook</a>
+            <a class="social-link__iteam" href="#">Twitter</a>
+            <a class="social-link__iteam" href="#">Instagram</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+:root { /*define variables locales*/
+    --color-primary: #003366;
+    --color-primary-light: #004c99;
+    --color-secondary: #ffd700;
+    --color-background: #f4f4f4;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-white: #ffffff;
+
+    /*espaciado*/
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    /*tipografia*/
+    --font-family: 'Roboto', Arial, sans-serif;
+    --font-size-base: 16px;
+    --font-size-large: 1.25rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 3.5rem;
+
+    --shadow-small: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-hover: 0 8px 24px rgba(0,0,0,0.25);
+
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    /*ease = que indica que la transición comienza lenta, acelera en el medio y termina lenta de forma suave*/
+}

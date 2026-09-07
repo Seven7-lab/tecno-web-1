@@ -1,0 +1,15 @@
+/*Estamos modularizando los estilos*/
+
+/*Ben significa bloque elemento modificador*/
+@import 'base/variables.css';
+
+/*tip para crear un archivo de manera directa*/
+/*ctrl + clic en el archivo 'styles/variables.css'*/
+
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/card.css';
+@import 'components/testimonials.css';
+@import 'components/contact.css';
+@import 'components/trailers.css';
+@import 'components/footer.css';

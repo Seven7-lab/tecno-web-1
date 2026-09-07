@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .galeria {
+            display: grid; /*grid es como una hja cuadriculada pero se activa con el display*/            
+            grid-template-columns: repeat(3, 1fr);/*definimos q habra columnas(3), y se dividira en una fraccion*/
+            grid-template-rows: auto;/*define la altura de las filas en la cuadrícula, en este caso sera automatico*/           
+            gap: 20px; /*Establece que habrá una separación de 20 píxeles tanto entre columnas como entre filas*/                           
+        }
+
+        .item-destacado {
+            grid-column: 1 / 3;                      
+            grid-row: 1 / 2;                          
+        }
+
+        .pagina {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+            grid-template-columns: 200px 1fr 1fr;
+            gap: 10px;
+        }
+
+        .header { grid-area: header; }
+        .sidebar { grid-area: sidebar; }
+        .main { grid-area: main; }
+        .footer { grid-area: footer; }
+    </style>
+</head>
+<body>
+    <header><!-- Etiqueta semántica de cabecera de pagina o seccion -->
+        <div class="logo">Mi Sitio Web</div>
+        <nav> <!--Le dice al navegador que esta sección contiene enlaces importantes para moverse por el sitio web.-->
+            <ul> <!--punteos-->
+                <!--li = Define cada uno de los elementos individuales que van dentro de una lista-->
+                <li><a href="#inicio">Inicio</a></li>
+                <!--a = Etiqueta de enlace, sirve para crear hipervínculos.-->
+                <!--href = Atributo que indica el destino del enlace-->
+                <li><a href="#servicios">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio"> <!--agrupa información que pertenece exclusivamente a un tema-->
+            <h1>Bienvenido a Mi Sitio Web</h1>
+            <p>Texto de introducción al sitio.</p>
+        </section>
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+
+            <article itemscope itemtype="https://schema.org/Movie">
+                <!-- 
+                    itemscope → Indica que este elemento contiene microdatos.
+                    itemtype → Define el tipo (Película).
+                -->
+                <img src="el-viaje.jpg" alt="Poster de la película El Viaje" itemprop="image">
+                <!-- itemprop="image" → Indica que esto es la imagen de la película -->
+            
+                <h3 itemprop="name">El Viaje</h3>
+                <!-- itemprop="name" → Nombre de la película -->
+            
+                <p itemprop="description">Una aventura épica que cambiará tu vida</p>
+                <span itemprop="director">Director: Juan Pérez</span>
+                <!--span = permite escribir todo texto en una linea y cuando llega al limite baja a la siguiente 
+                linea y todo lo demas q esta bajo de ese texto tambien baja pero no se modifican el orden-->
+                <span itemprop="datePublished">Año: 2025</span>
+                <span itemprop="duration">Duración: 120 min</span>
+                <span itemprop="ratingValue">Calificación: 4.5</span>
+            </article>
+
+            <article> <!--tiene sentido por sí mismo y podría extraerse de esa página y publicarse en otro lado sin perder su significado-->
+                <h3>Servicio 1</h3>
+                <p>Descripción del servicio 1.</p>
+            </article>
+        </section>
+
+        <section id="multimedia">
+            <!--src = indica la ruta o direccion del archivo-->
+            <!--alt = Si la imagen no carga, este texto aparecerá en su lugar-->
+            <img src="10/prograweb.png" alt="Logo del Club de Videos">
+            <!--Controls = hace que aparezcan los controles nativos del reproductor-->
+            <video src="10/videoTecnologia.mp4" controls width="640" height="360">
+                <p>Tu navegador no soporta la reproducción de videos.</p>
+            </video>
+            <video controls autoplay muted loop poster="portada.jpg">
+                <!--autoplay: Hace que el video comience a reproducirse automáticamente tan pronto como la página carga.
+                    muted: Silencia el audio del video por defecto.
+                    loop: Hace que el video se repita en bucle de manera indefinida al terminar.
+                    poster: Define una imagen de portada que se mostrará en el reproductor antes de que el usuario reproduzca el video-->
+                <source src="10/videoTecnologia.mp4" type="video/mp4">
+            </video>
+            <audio src="10/audio.mp3" controls>
+                <p>Tu navegador no soporta la reproducción de audio.</p>
+                <!--Mensaje que se muestra si el navegador es demasiado viejo para reproducir audio nativo.-->
+            </audio>
+            <!--permite incrustar un documento externo-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30600.54623931701!2d-68.15010002568354!3d-16.522650199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sbo!4v1786146800777!5m2!1ses!2sbo"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"> <!--protege la privacidad de las rutas internas de tu sitio web cuando interactúas con otros contenidos-->
+                <!--allowfullscreen = Permite que el contenido del iframe pueda expandirse a pantalla completa
+                loading="lazy" = Optimiza el rendimiento de la página web-->
+
+                <!-- <iframe src="https://youtu.be/LPnOR9Uhjdw?si=t7JJJN9VyQTSS1m" width="560" height="315" frameborder="0" allowfullscreen> -->
+                <p>Tu navegador no soporta iframes.</p>
+            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30600.54623931701!2d-68.15010002568354!3d-16.522650199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sbo!4v1786146800777!5m2!1ses!2sbo"
+                width="600" height="450" allowfullscreen>
+            </iframe>
+        </section>
+
+        <!--form = Etiqueta de formulario. Crea un contenedor interactivo para recopilar datos que el usuario va a ingresar.-->
+        <form action="#" method="POST"> <!--es metodo de envio. El método POST envía los datos de forma oculta y segura-->
+            <!--action: Atributo que indica a dónde se enviarán los datos al presionar el botón de enviar.
+            Al tener un #, significa que por ahora recarga la misma página-->
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3">
+                <!--name="nombre": Nombre clave con el que viajarán los datos hacia el servidor cuando se envíe el formulario-->
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha" name="fecha" max="2010-01-01">
+            </div>
+            <div class="form-group">
+                <label>Género:</label>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="femenino" name="genero" value="femenino">
+                <label for="femenino">Femenino</label>
+                <input type="radio" id="otro" name="genero" value="otro">
+                <label for="otro">Otro</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enviar Mensaje">
+            </div>
+        </form>
+
+        <aside><!--es información extra que puede ayudar al usuario, pero no es tema principal-->
+            <h4>Contenido Relacionado</h4>
+            <ul>
+                <li>Noticia 1</li>
+                <li>Noticia 2</li>
+            </ul>
+        </aside>
+    </main>
+    <footer> <!--Pie de magina-->
+        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+        </nav>
+    </footer>
+</body>
+</html>

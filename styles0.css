@@ -1,0 +1,142 @@
+
+:root{
+    /*declaracion de variables con --*/
+    --color-primary: #003366;
+    --color-primary-ligth: #004c99;
+    --color-secundary: #ffd700;
+    --color-background: #f4f4f4;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-write: #fff;  /* = #ffffff*/
+
+    /* TIPOS DE FUENTES */
+    --font-family:'Roboto',arial, sans-serif; /*si no encuentra roboto va al arial y asi sucesivamente */
+    --font-size-base: 16px;
+    --font-size-large:1.25rem; /* large es para q se vea mas grande */
+    /* rem es  una unidad relativa al tamanio de la fuente*/
+    --font-size-xl:2rem;
+    --font-size-xxl:3.5rem;
+    
+    /* espaciado */
+    --spacing-small:8px;
+    --spacing-medium:16px;
+    --spacing-large:24px;
+    --spacing-xl:3px;
+    --spacing-xxl:48px;
+
+    /* transiciones */
+    --transition-fast:0.2s ease;
+    /*para una animacino suave es ease*/
+    --transition-medium:0.3s ease;
+}
+
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box; 
+}
+
+body{
+    /*atributo*/     /*variable(--)*/
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-background); /*color de la pagina*/
+}
+
+/*nombres de las etiquetas*/
+header{
+    display:flex; /*q hace el flex??*/
+    /*espacios para los elementos*/
+    justify-content: space-between;
+    align-items: center; /*centrea los elemntos verticalmente*/
+
+    background-color: var(--color-primary);
+    color: var(--color-write);
+}
+
+header h1{
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-write);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-large);
+}
+
+/* etiquetas anidada */
+nav ul li a{
+    color: var(--color-white);
+    text-decoration: none;
+    padding: var(--spacing-small) var(--spacing-medium); /*espacio entre el contenido y la imagen*/
+    /*el primero se refiere a arriba y abajo, el segundo es a los lados*/
+        /*cuando hay un solo parametro se refiere a los 4 lados*/
+
+    border-radius: 4px; /*redonde las esquinas*/  
+}
+
+nav ul li a:hover{ /*el hover es donde el apuntado va encima de un texto y ese texto se borde de...*/
+    background-color: #585858; /* color gris */
+    color: var(--color-secundary); /* con letras amarillas */
+    /* como el: inicio, peliculas, testimonios */
+}
+
+/* alucion al main section y especificamente a la variable id=inicio */
+#inicio{
+    display: flex; /*horizontalmente o verticalmente*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-xxl) var(--spacing-xl);
+
+    /*la unidad vh es la region visible de la pagina web*/
+    min-height: 60vh;
+    background: linear-gradient(135deg, var(--color-primary), white); /*para hacer un degradado*/
+    color: var(--color-write); /*para el cambio de color del texto*/
+
+}
+
+/*main section h2*/
+#inicio h2{
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+}
+
+#inicio p{
+    font-size: var(--font-size-large);
+}
+
+#inicio a{
+    background-color: var(--color-secundary);
+    color: var(--color-text);
+    border-radius: 8px; /*bordera la caja*/
+    text-decoration: none; /*quitar subrayado*/
+    font-weight: 700;
+    font-size: var(--font-size-large); 
+    transition: all var(--transition-medium);
+    animation: fadein 2s ease-in-out;
+}
+
+/*cuando el puntero del mouse pare sobre el elemento de a q esta en inicio*/
+#inicio a:hover{
+    transform: scale(1.05);
+    /*para a sombra*/
+    box-shadow: var(--color-text);
+    background-color: #f7dc3f;
+}
+
+#peliculas{
+    padding: var(--spacing-xxl), var(--spacing-xl);
+    background-color: var(--color-write);
+}
+
+#peliculas h2{
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
