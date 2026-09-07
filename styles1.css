@@ -48,7 +48,7 @@ body {
 }
 
 /*nombres de las etiquetas*/
-header {
+.header {
     /*flex = una direccion*/
     display: flex; /*controlar como debe comportarse cada elemento*/
     /*convirtiendo al elemento en un contenedor flexible*/
@@ -62,19 +62,19 @@ header {
     box-shadow: var(--shadow-small);
 }
 
-header h1 { /*un h1 dentro del header*/
+.header__logo { /*un h1 dentro del header*/
     font-size: var(--font-size-xl); /*tamanio*/
     font-weight: 700; /*ancho*/
     color: var(--color-white); /*color*/
 }
 
-nav ul {
+.header__nav .header__menu{
     display: flex;
     gap: var(--spacing-large); /*crear espacio entre los elementos del hijos*/
     list-style: none;
 }
 
-nav ul li a { /*solo a los enlaces*/
+.header__nav .header__menu li a { /*solo a los enlaces*/
     color: var(--color-white);
     text-decoration: none; /*para eliminar las vinietas del texto del listado*/
     padding: var(--spacing-small) var(--spacing-medium);
