@@ -7,61 +7,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--HEADER-->
-    <header>
-        <div class="contenedor">
-            <h1>COMERCIO</h1>
-            <nav>
-                <a href="#">Menu 1</a>
-                <a href="#">Menu 2</a>
-                <a href="#">Menu 3</a>
-                <a href="#">Menu 4</a>
-                <button>Incribirse</button>
-                <button>Menu</button>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="contenedor header__contenedor">
+            <h1 class="header__titulo">COMERCIO</h1>
+            <nav class="header__nav">
+                <a href="#" class="header__link">Menu 1</a>
+                <a href="#" class="header__link">Menu 2</a>
+                <a href="#" class="header__link">Menu 3</a>
+                <a href="#" class="header__link">Menu 4</a>
+                <button class="header__button">Incribirse</button>
+                <button class="header__button header__button--menu">Menu</button>
             </nav>
         </div>
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main class="main">
         <section class="hero">
-            <h2>¿Listo para empezar?</h2>
-            <p>AKLSDKLAJD JAKDJKLJ LAKSDKKD LAKDJ AKJSD. attm Taz (el demonio de Tasmania)</p>
-            <button>Iniciar prueba gratuita</button>
+            <div class="hero__contenedor">
+                <h2 class="hero__titulo">¿Listo para empezar?</h2>
+                <p class="hero__texto">AKDJHLKSJFKS ALKSJDKLA  AKLSJD attm Taz(El demonio de Tasmania)</p>
+                <button class="hero__button">Iniciar prueba gratuita</button>
+            </div>
         </section>
 
         <section class="boletin">
-            <h2>Únase a nuestro boletín</h2>
-            <p>Suscríbete para recibir actualizaciones, acceder a ofertas exclusivas y más.</p>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Su nombre">
+            <h2 class="boletin__titulo">Únase a nuestro boletín</h2>
+            <p class="boletin__texto">Suscríbete para recibir actualizaciones, acceder a ofertas exclusivas y más.</p>
+            <form class="boletin__formulario">
+                <label for="nombre" class="boletin__label">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Su nombre" class="boletin__input">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Su dirección de email">
+                <label for="email" class="boletin__label">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Su dirección de email" class="boletin__input">
 
-                <button type="submit">Subscribirse</button>
+                <button type="submit" class="boletin__submit">Subscribirse</button>
             </form>
         </section>
     </main>
 
-    <!--FOOTER-->
-    <footer>
-        <div class="contenedor footer-columnas">
-            <div class="footer-columna">
-                <h2>COMERCIO</h2>
-                <p>&copy; 2025–2026</p>
-                <a href="#">Términos – Privacidad</a>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="contenedor footer__contenedor">
+            <div class="footer__columna">
+                <h2 class="footer__titulo">COMERCIO</h2>
+                <p class="footer__texto">&copy; 2025–2026</p>
+                <a href="#" class="footer__link footer__link--legal">Términos – Privacidad</a>
             </div>
-            <div class="footer-columna">
-                <h3>Enlaces</h3>
-                <a href="#">Productos</a>
-                <a href="#">Características</a>
-                <a href="#">Recursos</a>
-                <a href="#">Compañía</a>
+            <div class="footer__columna">
+                <h3 class="footer__subtitulo">Enlaces</h3>
+                <a href="#" class="footer__link">Productos</a>
+                <a href="#" class="footer__link">Características</a>
+                <a href="#" class="footer__link">Recursos</a>
+                <a href="#" class="footer__link">Compañía</a>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
